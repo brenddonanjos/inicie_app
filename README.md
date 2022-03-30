@@ -2,7 +2,7 @@
 <p align="center"><a href="https://inicie.digital/" target="_blank"><img src="https://inicie.digital/wp-content/uploads/2022/03/inicie_logo-03-2048x830.png" width="180"></a></p>
 
 <h2 align="center">Projeto teste - seleção de candidatos</h2>
-<p align="center">Escrito em PHP com laravel framework </p>
+<p align="center">Escrito em PHP com  Laravel Framework v7.30.6 (PHP v7.4.1) </p>
 <p align="center">Módulo para integração com a API inicie</p>
 
 <p align="center">
@@ -21,7 +21,7 @@ cd inicie_app
 <p>2. Iremos subir os containeres utilizando o docker-compose (Certifique-se de as portas 8000 e 3306 estejam livres): </p>   
 
 ```
-docker-compose up
+docker-compose up -d
 ```
 <p>3. Agora iremos executar 2 comandos no terminal do container da aplicação, o primeiro para atribuir permissões aos logs do laravel e o segundo para executar as migrações : </p>
 
