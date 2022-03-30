@@ -1,0 +1,33 @@
+version: '3.6'
+
+services:
+  laravel_app:
+    build: .
+    container_name: laravel_app
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8000:80
+    depends_on:
+      - mysql_app
+    networks:
+      - backend
+
+  mysql_app:
+    container_name: mysql_app
+    image: mysql:5.7.22
+    restart: always
+    ports: 
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: laravel
+      MYSQL_ROOT_PASSWORD: laravel
+      MYSQL_USER: root
+      MYSQL_PASSWORD: laravel
+    networks:
+      - backend
+
+networks:
+  backend:
+    name: backend-network
+    driver: bridge
